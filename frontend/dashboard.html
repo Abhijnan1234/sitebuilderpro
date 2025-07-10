@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - SiteBuilderPro</title>
+  <link rel="stylesheet" href="css/dashb.css" />
+  <link rel="stylesheet" href="css/landing.css" />
+</head>
+<body>
+
+  <header>
+    <h1 id="welcomeMessage">Welcome!</h1>
+    <div class="auth-buttons">
+      <a href="index.html"><button>Home</button></a>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>Choose a Template to Get Started</h2>
+    <p>Select a design and we’ll help you build your dream website!</p>
+  </section>
+
+  <section class="templates">
+    <div class="template-grid">
+      <div class="template">
+        <img src="https://via.placeholder.com/300x200?text=Startup" alt="Template 1">
+        <h4>Modern Startup</h4>
+        <p>Perfect for tech companies and apps</p>
+        <button>Use Template</button>
+      </div>
+
+      <div class="template">
+        <img src="https://via.placeholder.com/300x200?text=Business" alt="Template 2">
+        <h4>Classic Business</h4>
+        <p>Professional layout for services and shops</p>
+        <button>Use Template</button>
+      </div>
+
+      <div class="template">
+        <img src="https://via.placeholder.com/300x200?text=Portfolio" alt="Template 3">
+        <h4>Creative Portfolio</h4>
+        <p>Ideal for designers, artists, and freelancers</p>
+        <button>Use Template</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Prevent direct access
+    if (!localStorage.getItem("loggedIn")) {
+      window.location.href = "login.html";
+    }
+
+    // Set personalized greeting
+    const name = localStorage.getItem("name") || "User";
+    document.getElementById("welcomeMessage").textContent = "Welcome, " + name + "!";
+
+    function logout() {
+      localStorage.clear();
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

@@ -108,7 +108,22 @@ header h1 {
 .template h4 {
   margin: 10px 0 5px;
 }
+.preview-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
 
+.preview-button:hover {
+  background-color: #0056b3;
+}
 footer {
   background-color: #343a40;
   color: #fff;
@@ -122,3 +137,4 @@ footer {
     align-items: center;
   }
 }
+

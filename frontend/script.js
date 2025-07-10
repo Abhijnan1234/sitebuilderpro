@@ -15,7 +15,15 @@ document.getElementById("loginForm")?.addEventListener("submit", async (e) => {
 
   const result = await res.json();
   const msg = document.getElementById("loginMessage");
-  msg.textContent = result.token ? "Login successful!" : (result.message || "Login failed.");
+  if(result.token) {
+    msg.textContent = "Login successful!";
+     localStorage.setItem("loggedIn", "true");
+      window.location.href = "dashboard.html";
+  }
+  else {
+      msg.innerText = result.message || "Login failed.";
+      msg.style.color = "red";
+    }
 });
 
 // Signup handler

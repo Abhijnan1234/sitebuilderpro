@@ -1,0 +1,48 @@
+.templates {
+      background-color: #f1f3f5;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .template-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .template {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 15px;
+      max-width: 300px;
+      transition: transform 0.2s ease;
+    }
+
+    .template:hover {
+      transform: scale(1.03);
+    }
+
+    .template img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .template h4 {
+      margin: 10px 0 5px;
+    }
+
+    .template button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      border: none;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .template button:hover {
+      background-color: #0056b3;
+    }
