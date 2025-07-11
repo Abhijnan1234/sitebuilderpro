@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Template Editor - SiteBuilderPro</title>
+  <link rel="stylesheet" href="css/editor.css" />
+</head>
+<body>
+  <div class="editor-layout">
+    <!-- Left Sidebar -->
+    <div class="sidebar left" id="leftSidebar">
+      <button class="collapse-btn" onclick="toggleSidebar('left')">←</button>
+      <h2>Editor Panel</h2>
+      <label>
+        Your Name:
+        <input type="text" id="edit-name" />
+      </label>
+      <label>
+        Bio/Tagline:
+        <input type="text" id="edit-bio" />
+      </label>
+      <label>
+        About Me:
+        <textarea id="edit-about" rows="4"></textarea>
+      </label>
+      <button id="resetButton">Reset</button>
+      <button id="downloadBtn" class="download-button">Download Edited Template</button>
+    </div>
+
+    <!-- Live Preview -->
+    <div class="editor-preview">
+      <iframe id="preview-frame" src="temppv/cpf.html"></iframe>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="sidebar right" id="rightSidebar">
+      <button class="collapse-btn" onclick="toggleSidebar('right')">→</button>
+      <h3>Edit Projects</h3>
+      <div id="project1" class="project-editor">
+        <label>Title 1:<input type="text" class="proj-title" data-index="0" /></label>
+        <label>Description 1:<input type="text" class="proj-desc" data-index="0" /></label>
+        <label>Image URL 1:<input type="text" class="proj-img" data-index="0" /></label>
+      </div>
+      <div id="project2" class="project-editor">
+        <label>Title 2:<input type="text" class="proj-title" data-index="1" /></label>
+        <label>Description 2:<input type="text" class="proj-desc" data-index="1" /></label>
+        <label>Image URL 2:<input type="text" class="proj-img" data-index="1" /></label>
+      </div>
+      <div id="project3" class="project-editor">
+        <label>Title 3:<input type="text" class="proj-title" data-index="2" /></label>
+        <label>Description 3:<input type="text" class="proj-desc" data-index="2" /></label>
+        <label>Image URL 3:<input type="text" class="proj-img" data-index="2" /></label>
+      </div>
+    
+    </div>
+  </div>
+
+  <script src="editor.js"></script>
+</body>
+</html>
